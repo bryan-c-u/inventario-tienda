@@ -5,8 +5,8 @@ import org.springframework.stereotype.Repository;
 
 import com.inventario.tienda.entity.Producto;
 
-// Repositorio para la entidad Producto, extiende JpaRepository para obtener métodos CRUD automáticamente
+
 @Repository
 public interface ProductosRepository extends JpaRepository<Producto, Long>{
-    
+    Producto findByNombre(String nombre);
 }
